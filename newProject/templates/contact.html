@@ -5,18 +5,19 @@
 <div class="container mb-3 py-4" >
     <h1 class="text-center"> contact us</h1>
     <form method="POST" action="/contact">
+     {% csrf_token %}
         <div class="form-group">
-            <label for="Name" class="form-label">Name</label>
+            <label for="name" class="form-label">Name</label>
             <input type="text" class="form-control" id="name" name="name" placeholder="    ">
         </div>
     
         <div class="form-group">
-            <label for="Email address" class="form-label">Email address</label>
+            <label for="email" class="form-label">Email address</label>
             <input type="email" class="form-control" id="email" name="email" placeholder="   ">
         </div>
         
         <div class="form-group">
-            <label for="Phone number" class="form-label">Phone number</label>
+            <label for="phone" class="form-label">Phone number</label>
             <input type="phone" class="form-control" id="phone" name="phone" placeholder="   ">
         </div>
         
@@ -24,8 +25,9 @@
             <label for="Query" class="form-label">Enter your query</label>
             <textarea class="form-control" id="query" name="query" rows="3"></textarea>
         </div>
+        <button class="btn btn-primary" type="submit">submit</button>
     </form>
-      <button class="btn btn-primary" type="submit">submit</button>
+      
 
 </div>
  {% endblock body %}
